@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اضافة مقال جديد</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="fonts/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/47.5.0/ckeditor5.css">
+    <style>
+        .ck-editor__editable {
+            height: 350px !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+
+        <!-- Start header -->
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+
+                <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/public/">لوحة تحكم المتجر</a>
+                    </div>
+                    <div class="px-3">
+                        <a href="#"><i class="fa-solid fa-chart-bar" id="sidebar-toggle"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control header-search" placeholder="اكتب اسم المنتج للبحث">
+                    </form>
+                </div>
+
+
+
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+
+                    <div class="icons d-flex gap-3">
+                        <a href=""><i class="fa-regular fa-comment"></i></a>
+
+
+
+                        <div class="messeges-container position-relative" id="messeges-container">
+                            <i class="fa-regular fa-envelope"></i>
+                            <ul class="messeges-area position-absolute text-center" id="messeges-area">
+                                <div class="messeges-header">
+                                    <h3>أحدث الرسائل</h3>
+                                </div>
+
+                                <li class="d-flex align-items-center justify-content-between">
+
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/man (1).png" alt="">
+                                        <h4>سامر محمد</h4>
+                                    </div>
+
+                                    <i class="fa-regular fa-comment"></i>
+
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/man (1).png" alt="">
+                                        <h4>محمد الخالد</h4>
+                                    </div>
+
+                                    <i class="fa-regular fa-comment"></i>
+
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/man (1).png" alt="">
+                                        <h4>عبير السالم</h4>
+                                    </div>
+
+                                    <i class="fa-regular fa-comment"></i>
+
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/man (1).png" alt="">
+                                        <h4>سامي علي</h4>
+                                    </div>
+
+                                    <i class="fa-regular fa-comment"></i>
+
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/man (1).png" alt="">
+                                        <h4>حيدر قاسم</h4>
+                                    </div>
+
+                                    <i class="fa-regular fa-comment"></i>
+
+                                </li>
+
+
+
+                                <button class="btn btn-warning h-75 w-100"><a class="text-black fs-6" href="">كافة الرسائل</a></button>
+
+                            </ul>
+                        </div>
+
+
+                        <a class="position-relative bell" href=""><i class="fa-regular fa-bell fa-shake"></i></a>
+                    </div>
+
+                    <div class="avatar">
+                        <img width="40" src="assets/images/man (1).png" alt="">
+                    </div>
+
+                    <a data-bs-toggle="offcanvas" href="#users-online"><i
+                            class="fa-solid fa-bars-staggered active-users"></i></a>
+
+                </div>
+
+            </header>
+        </nav>
+        <!-- End Header -->
+
+        <!-- Start Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="profile">
+                <img width="90" src="assets/images/man (1).png" alt="">
+                <h3>سامي علي</h3>
+            </div>
+            <ul class="ul-sidebar">
+                <li class="mb-2 active">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="/public/" class="m-r-10">الصفحة الرئيسية</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-layer-group fs-5"></i>
+                    <a href="" class="m-r-10">تصنيفات المنتجات</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-box fs-5"></i>
+                    <a href="" class="m-r-10">المنتجات</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-book fs-5"></i>
+                    <a href="" class="m-r-10">الكتب الدراسية</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-users fs-5"></i>
+                    <a href="students.html" class="m-r-10">كافة الطلاب</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-chalkboard-teacher fs-5"></i>
+                    <a href="" class="m-r-10">المدرسين</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-chalkboard-teacher fs-5"></i>
+                    <a href="blog.html" class="m-r-10">المدونة</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-user fs-5"></i>
+                    <a href="" class="m-r-10">المستخدمين</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-gear fs-5"></i>
+                    <a href="" class="m-r-10">الإعدادات</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-key fs-5"></i>
+                    <a href="" class="m-r-10">الصلاحيات</a>
+                </li>
+            </ul>
+
+
+        </div>
+        <!-- End Sidebar -->
+
+
+        <!-- محتوى الصفحة -->
+        <div class="content p-3" id="content">
+            <div class="inner-content">
+                <div class="container-fluid">
+                    <h4>إضافة مقال جديد</h4>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card p-3">
+
+
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="">اسم المقال</label>
+                                            <input type="text" placeholder="اسم المقال" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="">الاسم اللطيف</label>
+                                            <input type="text" placeholder="ادخل رابط المقال" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <label for="">التصنيف</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected disabled>الرجاء اختيار التصنيف</option>
+                                                <option value="1">اقتصادية</option>
+                                                <option value="2">فنية</option>
+                                                <option value="3">علمية</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-md-6" for="">التاغات</label>
+                                            <select class="js-example-basic-multiple form-select col-md-6"
+                                                name="states[]" multiple="multiple">
+                                                <option value="AL">اقتصاد</option>
+                                                <option value="WY">اخبار</option>
+                                                <option value="WY">علوم</option>
+                                                <option value="WY">صحة</option>
+                                                <option value="WY">سياسة</option>
+                                                <option value="WY">رياضة</option>
+                                                <option value="WY">فن</option>
+                                            </select>
+                                            <div class="btn">
+                                                <i class="fa-solid fa-info fs-6" style="color: rgb(255, 0, 0);"></i>
+                                            </div>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">تحميل صورة المقال</label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">تحميل صورة البنر</label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div>
+                                        <textarea name="editor" class="form-control" id="editor"></textarea>
+                                    </div>
+
+
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Users Online List -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="users-online" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header bg-warning">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">المستخدمين المتصلين</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="alert alert-success">
+                كافة المستخدمين النشطين
+            </div>
+
+
+            <div class="item-side-menu d-flex mb-3">
+
+                <div class="avatar-info position-relative">
+
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
+                    <img width="50" src="assets/images/man (1).png" alt="">
+                    <h4>ايمن الاحمد</h4>
+                </div>
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+                </div>
+
+            </div>
+
+
+
+            <div class="item-side-menu d-flex mb-3">
+
+                <div class="avatar-info position-relative">
+
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
+                    <img width="50" src="assets/images/man (1).png" alt="">
+                    <h4>ايمن الاحمد</h4>
+                </div>
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Users Online List -->
+
+
+
+
+    <script src="assets/js/datatables.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.js-example-basic-multiple').select2({
+                tags: true, maximumSelectionLength: 3
+            });
+        });
+    </script>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/43.3.1/ckeditor5.js",
+            "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/43.3.1/"
+        }
+    }
+
+</script>
+
+    <script type="module">
+        import {
+            ClassicEditor,
+            Essentials,
+            Bold,
+            Italic,
+            Underline,
+            Strikethrough,
+            Subscript,
+            Superscript,
+            Font,
+            Paragraph,
+            CodeBlock,
+            Link,
+            List,
+            Image,
+            ImageToolbar,
+            ImageCaption,
+            ImageStyle,
+            ImageResize,
+            Table,
+            TableToolbar,
+            MediaEmbed,
+            BlockQuote,
+            Alignment,
+            Highlight,
+            RemoveFormat,
+            Heading,
+            TodoList,
+            Indent,
+            IndentBlock
+        } from 'ckeditor5';
+
+        ClassicEditor
+            .create(document.querySelector('#editor'), {
+                plugins: [
+                    Essentials, Bold, Italic, Underline, Strikethrough, Subscript, Superscript, Font, Paragraph, CodeBlock,
+                    Link, List, Image, ImageToolbar, ImageCaption, ImageStyle, ImageResize, Table, TableToolbar,
+                    MediaEmbed, BlockQuote, Alignment, Highlight, RemoveFormat, Heading, TodoList, Indent, IndentBlock
+                ],
+                toolbar: {
+                    items: [
+                        'undo', 'redo',
+                        '|',
+                        'heading',
+                        '|',
+                        'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor',
+                        '|',
+                        'bold', 'italic', 'underline', 'strikethrough', 'subscript', 'superscript', 'code',
+                        '|',
+                        'link', 'uploadImage', 'blockQuote', 'codeBlock',
+                        '|',
+                        'alignment',
+                        '|',
+                        'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent',
+                        '|',
+                        'insertTable', 'mediaEmbed',
+                        '|',
+                        'highlight', 'removeFormat'
+                    ],
+                    shouldNotGroupWhenFull: true
+                },
+                image: {
+                    toolbar: [
+                        'imageTextAlternative', 'toggleImageCaption', 'imageStyle:inline', 'imageStyle:block', 'imageStyle:side', 'linkImage'
+                    ]
+                },
+                table: {
+                    contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties', 'tableCellProperties']
+                },
+                language: {
+                    lnguage: 'ar',
+                    languageDirection: 'rtl'
+                }
+            })
+            .then(editor => {
+                console.log('Editor was initialized', editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
+</body>
+
+</html>
